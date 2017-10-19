@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    1.求整数1～100的累加值，但要求碰到个位为3的数则停止累加
+
+        //    function getSum(n,m){
+        //        var sum = 0;
+        //        for(var i=n;i<=m;i++){
+        //            if(i%10 == 3){
+        //              break;  
+        //            }
+        //            sum += i;
+        //        }
+        //        return sum;
+        //    }
+        //    var result = getSum(1,100);
+        //    console.log(result);
+
+        //    2.求整数1～100的累加值，但要求跳过所有个位为3的数
+        //    function getSum(n,m){
+        //         var sum = 0;
+        //        for(var i=n;i<=m;i++){
+        //            if(i%10 == 3){
+        //                continue;
+        //            }
+        //            sum += i;
+        //        }
+        //        return sum;
+        //    }
+        //    var result = getSum(1,100);
+        //    console.log(result);
+
+        //    1.求两个数的最大数
+        // var n = 2,m=5;
+        // var result = n>m ?n:m;
+        // console.log(result);
+
+        //    2.判断一个数是偶数还是奇数
+        // function getPD(num){
+        //     if(num%2 === 0){
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+        // }
+        // var result = getPD(51);
+        // console.log(result);
+
+        //    3.分数转换，把百分制转换成ABCDE   <60  E  60-70 D  70-80 C  80-90 B  90 - 100 A
+        // var num = 0;
+        // switch (true) { //当给switch的判断条件设置为true时，case可以进行范围判断
+        //     case num > 100 || num < 0:
+        //         alert("分数不存在");
+        //         break;
+        //     case num >= 90:
+        //         alert("A");
+        //         break;
+        //     case num >= 70:
+        //         alert("B");
+        //         break;
+        //     case num >= 60:
+        //         alert("C");
+        //         break;
+        //     default:
+        //         alert("D");
+        // }
+
+
+        //    4.判断一个年份是闰年还是平年
+        //        闰年：能被4整除，但不能被100整除的年份 或者 能被400整除的年份
+        // function getYear(year){
+        //     if(year%4 == 0 && year%100 != 0 || year%400 == 0){
+        //         return true;
+        //     } else {
+        //         return false;
+        //     }
+
+        // }
+        // var result = getYear(2008);
+        // console.log(result);
+
+
+        //    5.判断一个人的年龄是否满18岁(是否成年)
+        // function getAge(age){
+        //     var judge;
+        //     if(age>=18){
+        //         judge = "成年";
+
+        //     } else {
+        //         judge = "未成年";
+        //     } 
+        //     return judge;
+        // }
+        // var result = getAge(18);
+        // console.log(result);
+
+
+        //1.打印一个正方形;
+        // var j;
+        // for(var i=0;i<9;i++){
+        //     for(j=0;j<9;j++){
+        //         document.write("❤");
+        //     }
+        //     document.write("<br/>");
+        // }
+
+
+
+        //2.打印一个三角形;
+        // var j;
+        // for (var i = 0; i < 9; i++) {
+        //     for (j = 0; j <= i; j++) {
+        //         document.write("❤");
+        //     }
+        //     document.write("<br/>");
+        // }
+
+        //3.打印九九乘法表;
+        // var j;
+
+        // for(var i=1;i<=9;i++){
+        //     for(j=1;j<=i;j++){
+
+        //         document.write(j + "*" + i + "=" + j*i + "  ");
+        //     }
+        //     document.write("<br/>");
+        // }
+
+        //        1.求100以内所有3的倍数的和
+            // function getSum(num){
+            //     var sum = 0;
+            //     for(var i=1;i<=num;i++){
+            //         if(i%3 == 0){
+            //             sum += i;
+            //             // console.log(sum);
+            //         }
+            //     }
+            //     return sum;
+            // }
+            // var result = getSum(100);
+            // console.log(result);
+
+        //        2.使用do-while循环：输出询问“我爱你，嫁给我吧？”，选择“你喜欢我吗？(y/n):"，
+        //如果输入为y则打印”我们形影不离“，若输入为n,则继续询问
+                // var  result;
+                // do{
+                //     result = prompt("我爱你，嫁给我吧？","你喜欢我吗？(y/n):");
+                    
+                // }while(result != "y");
+                // alert("我们形影不离");
+
+
+        //根据用户输入的用户名和密码进行检测，如果均正确，显示登录成功，否则让用户重新输入用户名和密码
+        // var password,userName;
+        // do{
+        //     userName = prompt("请输入用户名");
+        //     password = prompt("请输入密码");
+        // } while (userName != "zhang" || password != "123456");
+        // alert("恭喜输入正确");
+
+        
+        //1 计算用户输入的数值的位数(思考)
+        // var num = prompt("请输入"); //弹窗是不需要一直循环执行的，需要重复执行的是通过除以10，获取用户提交的字符位数
+        // var count = 0;
+        // do{
+        //     num /= 10; //将返回的字符串通过循环条件一直除以10，一直除到不满足条件退出循环
+        //     count++;
+        // }while(num >= 1 || num <= -1);
+        // console.log(count);
+
+                    
+
+
+        // 重点2.有个人想知道，一年之内一对兔子能繁殖多少对？
+        //      于是就筑了一道围墙把一对兔子关在里面。
+        //      已知一对兔子每个月可以生一对小兔子，而一对兔子从出生后第3个月起每月生一对小兔子。
+        //      假如一年内没有发生死亡现象，
+        //      那么，一对兔子一年内（12个月）能繁殖成多少对？
+
+        //          （兔子的规律为数列，1，1，2，3，5，8，13，21...）
+        // function fun(n){
+        //     var a = 1,b = 1,temp;
+        //     for(var i=3;i<=n;i++){
+        //         temp = b;
+        //         b = a + b;
+        //         a = temp;
+        //     }
+        //     return b;
+        // }
+        // var result = fun(6);
+        // console.log(result);
+
+
+
+
+
+        //1.遍历二维数组，三维数字.......
+        //    var arr = [[1,2,3],[4,5,6],[7,8,9]];
+            // function fun(arr) {
+            //     var j,newArr = [];
+            //     for(var i=0;i<arr.length;i++){
+            //         if(Object.prototype.toString.call(arr[i]) === "[object Array]"){
+            //             for(j=0;j<arr[i].length;j++){
+            //                 newArr[newArr.length] = arr[i][j];
+            //             }
+            //         } else {
+            //             newArr[newArr.length] = arr[i];
+            //         }
+            //     }
+            //     return newArr;
+            // }
+
+            // var result = fun([[1,2,3],[4,5,6],[7,8,9]]);
+            // console.log(result);
+
+
+
+
+        //扩展练习：
+        // 数组去重(从原数组取出数据放入新数组，要求新数组中为不重复的数据)(顺序无所谓)
+        //举例：  原数组 [1,1,2,3,3,2,4,5,5,4,3,2,1]  处理后的结果数组 [1,2,3,4,5] 
+        //可以尝试去网上查阅资料，后天回来会进行详细讲解。
+        // function fun(arr){
+        //     var newArr = [];
+        //     newArr[0] = arr[0];
+        //     var j,flag;
+        //     for(var i=1;i<arr.length;i++){
+        //         //假设成立法
+        //         flag = true;
+        //         for(j=0;j<newArr.length;j++){
+        //             if(newArr[j] == arr[i]){
+        //                 flag = false;
+        //                 break;
+        //             }
+        //         }
+        //         if(flag){
+        //             newArr[newArr.length] = arr[i];
+        //         }
+        //     }
+        //     return newArr;
+        // }
+
+        // function fun(arr){
+        //     var newArr = [];
+        //     newArr[0] = arr[0];
+        //     var j,count;
+        //     for(var i=1;i<arr.length;i++){
+        //         //计数法
+        //         count = 0;
+        //         for(j=0;j<newArr.length;j++){
+        //             if(newArr[j] == arr[i]){
+        //                 count = 1;
+      //                   break;
+        //             }
+        //         }
+        //         if(count === 0){
+        //             newArr[newArr.length] = arr[i];
+        //         }
+        //     }
+        //     return newArr;
+        // }
+
+        // function fun(arr){
+        //     var newArr = [];
+        //     newArr[0] = arr[0];
+        //     var j;
+        //     for(var i=1;i<arr.length;i++){
+        //         for(j=0;j<newArr.length;j++){
+        //             if(newArr[j] == arr[i]){
+
+        //                 break;
+        //             }
+        //         }
+        //利用了循环的特性，如果一轮循环结束，其中没有一次是相等的，那么最后跳出循环的值一定是和数组长度相等，就可以作为一个判断条件
+        //         if(j == newArr.length){
+        //             newArr[newArr.length] = arr[i];
+        //         }
+        //     }
+        //     return newArr;
+        // }
+
+
+
+
+        // var result = fun([1,1,2,3,3,2,4,5,5,4,3,2,1]);
+        // console.log(result);
+
+
+        //    对数组排序，从小到大(冒泡排序)
+        // function fun(arr){
+        //     var j,temp,flag,count=0;
+        //     for(var i=0;i<arr.length-1;i++){
+        //         // count++;
+        //         //假设成立法
+        //         flag = true;
+        //         for(j=0;j<arr.length-1-i;j++){
+        //             if(arr[j] > arr[j+1]){
+        //                 temp = arr[j];
+        //                 arr[j] = arr[j+1];
+        //                 arr[j+1] = temp;
+        //                 flag = false;
+        //             }
+        //         }
+        //         if(flag){
+        //             break;
+        //         }
+        //     }
+        //     // console.log(count);
+        //     return arr;
+        // }
+
+        //     function fun(arr){
+        //         var j,temp,count;
+        //         for(var i=0;i<arr.length-1;i++){
+        //             //计数法
+        //             count =0;
+        //             for(j=0;j<arr.length-1-i;j++){
+        //                 if(arr[j] > arr[j+1]){
+        //                     temp = arr[j];
+        //                     arr[j] = arr[j+1];
+        //                     arr[j+1] = temp; 
+        //                     count = 1;
+        //                 }
+        //             }
+        //             if(count == 0){
+        //                 break;
+        //             }
+        //         }
+        //         return arr;
+        //     }
+
+
+
+        // var result = fun([2,5,3,1,4,6,8]);
+        // console.log(result);
+
+
+        //输入某年某月某日，判断这一天是这一年的第几天？
+        //思路：只要把月份和日期累计到一起;
+        //1.日: 直接把日期累计到总时间中;
+        //2.月: 28,29,30,31都有，定义一个数组;
+        //3.年: 平年2月28,闰年2月29;
+            function fun(y){
+                var bool;
+                if(y%4 == 0 && y%100 != 0 || y%400 == 0){
+                    bool = true;
+                } else {
+                    bool = false;
+                }
+                return bool;
+            }
+
+            function getDate(year,month,day){
+                var bool = fun(year);
+                var arr = [31,28,31,30,31,30,31,31,30,31,30,31];
+                var sun = 0;
+                if(bool == true){
+                    for(var i=0;i<month-1;i++){
+                        sun += arr[i];
+                    }
+                    if(month>2){
+                        day += 1;
+                    }
+                    sun += day;
+                    
+                } else {
+                   for(var i=0;i<month-1;i++){
+                        sun += arr[i];
+                    }
+                    sun += day;
+                }
+                return sun;
+            }
+            var result = getDate(2004,3,16);
+            console.log(result);
+
+
+
+
+
+
+        //三种常用的解题方式(假设成立法，计数法，循环特性)
+    </script>
+</body>
+
+</html>
